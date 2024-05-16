@@ -51,8 +51,11 @@ def apresentacao_introducao():
 def apresentacao_Preparação_dos_Dados():
     st.header("Exploração e Preparação de Dados")
 
-    # Carregar o arquivo Excel
-    df = pd.read_excel('Petróleo.xlsx')
+    LOCAL = os.path.abspath(os.path.realpath(os.path.dirname(_file_)))
+   
+     # Carregar o arquivo Excel
+    df = pd.read_excel(os.path.join(LOCAL, "Petróleo.xlsx"))
+    #pd.read_excel('Petróleo.xlsx')
 
     # Adicione seu código aqui
     codigo = """
